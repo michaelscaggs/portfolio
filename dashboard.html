@@ -16,7 +16,6 @@
             top: 0;
             background-color: white; /* Prevents text from overlapping */
             z-index: 1000; /* Ensures it stays on top */
-            border-bottom: 1px solid #ccc; /* Optional styling */
             width: 100%;
         }
 
@@ -42,11 +41,11 @@
             background-color: #333;
             top: 0;
             width: 100%;
-            height: 30px;
+            height: 20px;
             display: flex;
             color: white;
             z-index: 1000;
-            padding: 0 20px;
+            padding: 20px;
             box-sizing: border-box;
         }
 
@@ -62,36 +61,6 @@
                     color: black;
                 }
 
-        * {
-            box-sizing: border-box;
-        }
-
-        .container {
-            width: 100%;
-            padding: 50px;
-            overflow: auto; /* Clears floats so container doesn't collapse */
-            background-color: black;
-        }
-
-        .box {
-            float: left;
-            width: 50%; /* Creates two equal columns */
-            height: 100%;
-            text-align: left;
-        }
-
-        .container2 {
-            width: 100%;
-            overflow: auto; /* Clears floats so container doesn't collapse */
-            background-color: black;
-        }
-
-        .box2 {
-            float: left;
-            width: 100%; /* Creates three equal columns */
-            height: 100%;
-            text-align: center;
-        }
         /* The dropdown container */
         .dropdown {
             float: left;
@@ -143,6 +112,37 @@
         /* Show the dropdown menu on hover */
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            padding: 50px;
+            overflow: auto; /* Clears floats so container doesn't collapse */
+            background-color: black;
+        }
+
+        .box {
+            float: left;
+            width: 50%; /* Creates two equal columns */
+            height: 100%;
+            text-align: left;
+        }
+
+        .container2 {
+            width: 100%;
+            overflow: auto; /* Clears floats so container doesn't collapse */
+            background-color: black;
+        }
+
+        .box2 {
+            float: left;
+            width: 100%; /* Creates three equal columns */
+            height: 100%;
+            text-align: center;
         }
         
   .scaled-iframe {
