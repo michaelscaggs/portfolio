@@ -147,6 +147,16 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        
+  .scaled-iframe {
+    width: 1000px; /* Original width */
+    height: 600px; /* Original height */
+    border: 0;
+    
+    /* The Zoom Effect */
+    transform: scale(0.75); /* Zoom to 75% */
+    transform-origin: 0 0;  /* Ensures scaling starts from top-left */
+  }
     </style>
     <title>Preferred Dashboard Template</title>
     <base target="_blank">
@@ -184,7 +194,7 @@
     <main>
         <div class="container">
             <div class="box" style="background-color:black;">
-                <iframe src="https://calendar.google.com/calendar/embed?src=anakinscaggs24%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <iframe class="scaled-iframe" src="https://calendar.google.com/calendar/embed?src=anakinscaggs24%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
             <div class="box" style="background-color:black;">
                 <iframe src="https://michaelscaggs.github.io/content.html"></iframe>
