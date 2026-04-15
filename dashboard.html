@@ -121,7 +121,6 @@
             width: 100%;
             padding: 50px;
             overflow: auto; /* Clears floats so container doesn't collapse */
-            border: 1px;
             background-color: black;
         }
 
@@ -129,13 +128,13 @@
             float: left;
             width: 50%; /* Creates two equal columns */
             height: 100%;
+            border: 5px;
             text-align: left;
         }
 
         .container2 {
             width: 100%;
             overflow: auto; /* Clears floats so container doesn't collapse */
-            border: 1px;
             background-color: black;
         }
 
@@ -143,14 +142,11 @@
             float: left;
             width: 100%; /* Creates three equal columns */
             height: 100%;
+            border: 5px;
             text-align: center;
         }
         
   .scaled-iframe {
-    width: 825px; /* Original width */
-    height: 500px; /* Original height */
-    border: 0;
-    
     /* The Zoom Effect */
     transform: scale(0.60); /* Zoom to 75% */
     transform-origin: 0 0;  /* Ensures scaling starts from top-left */
@@ -195,7 +191,7 @@
                 <iframe class="scaled-iframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showTitle=0&showTz=0&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
             <div class="box" style="background-color:black;">
-               <iframe class="scaled-iframe" src="https://www.youtube.com/embed/1EChsxRI4Zg?si=T2PAN8iDWA06o4LM" allow="accelerometer; autoplay;"></iframe>
+               <iframe class="scaled-iframe" src="https://www.youtube.com/embed/1EChsxRI4Zg?si=T2PAN8iDWA06o4LM" allow="accelerometer; autoplay;" height="600" width="800"></iframe>
             </div>
         </div>
         <div class="container2">
