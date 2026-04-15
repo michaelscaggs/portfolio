@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Use border-box to include padding and border in the element's total width */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+
+        .sticky-header {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 0;
+            background-color: white; /* Prevents text from overlapping */
+            z-index: 1000; /* Ensures it stays on top */
+            border-bottom: 1px solid #ccc; /* Optional styling */
+            width: 100%;
+        }
+
+        .world-clock-container {
+            background-color: #000;
+            justify-content: left;
+            display: flex;
+            gap: 0px;
+            height: 30px;
+            font-family: console;
+            color: #4AF626;
+        }
+
+        .clock-box {
+            border: none;
+            padding: 10px;
+            text-align: center;
+            width: 150px;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            background-color: #333;
+            top: 0;
+            width: 100%;
+            height: 30px;
+            align-items: left;
+            display: flex;
+            color: white;
+            z-index: 1000;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+            .navbar a {
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                .navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            overflow: auto; /* Clears floats so container doesn't collapse */
+            background-color: black;
+        }
+
+        .box {
+            float: left;
+            width: 50%; /* Creates two equal columns */
+            padding: 20px;
+            height: 150px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .container2 {
+            width: 100%;
+            overflow: auto; /* Clears floats so container doesn't collapse */
+            background-color: black;
+        }
+
+        .box2 {
+            float: left;
+            width: 100%; /* Creates three equal columns */
+            padding: 20px;
+            height: 150px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+    <title>Preferred Dashboard Template</title>
+    <base target="_blank">
+</head>
+<body>
+    <div class="sticky-header">
+        <!-- World Clock -->
+        <div class="world-clock-container">
+            <div class="clock-box">UTC: <span id="utc"></span></div>
+            <div class="clock-box">ET: <span id="est"></span></div>
+            <div class="clock-box">CT: <span id="cst"></span></div>
+            <div class="clock-box">MT: <span id="mst"></span></div>
+            <div class="clock-box">AT: <span id="ast"></span></div>
+            <div class="clock-box">PT: <span id="pst"></span></div>
+            <div class="clock-box">HT: <span id="hst"></span></div>
+        </div>
+        <!-- Top Navbar -->
+        <nav class="navbar">
+            <a href="http://www.cnn.com">News</a>
+            <a href="http://www.espn.com">Sports</a>
+            <a href="http://www.weather.com">Weather</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Dropdown Link List
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="container">
+            <div class="box" style="background-color:black;">
+                <iframe src="https://calendar.google.com/calendar/embed?src=anakinscaggs24%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="box" style="background-color:black;">
+                <iframe src="https://michaelscaggs.github.io/content.html" width="100%" height="150px"></iframe>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="box2" style="background-color:black;">
+                <iframe src="https://michaelscaggs.github.io/content.html" width="100%" height="150px"></iframe>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+	function updateClocks() {
+		const now = new Date();
+
+		document.getElementById("utc").textContent = now.toUTCString().split(' ')[4];
+		document.getElementById("est").textContent = now.toLocaleTimeString("en-US", {timeZone: "America/New_York"});
+		document.getElementById("cst").textContent = now.toLocaleTimeString("en-US", {timeZone: "America/Chicago"});
+		document.getElementById("mst").textContent = now.toLocaleTimeString("en-US", {timeZone: "America/Denver"});
+		document.getElementById("ast").textContent = now.toLocaleTimeString("en-US", {timeZone: "America/Phoenix"});
+		document.getElementById("pst").textContent = now.toLocaleTimeString("en-US", {timeZone: "America/Los_Angeles"});
+		document.getElementById("hst").textContent = now.toLocaleTimeString("en-US", {timeZone: "Pacific/Honolulu"});
+	}
+
+	// Update every second
+	setInterval(updateClocks, 1000);
+	updateClocks(); // Initial call
+</script>
+</html>
