@@ -159,6 +159,7 @@
     <div class="sticky-header">
         <!-- World Clock -->
         <div class="world-clock-container">
+            <div class="clock-box">Today's Date: <span id="today"></span></div>
             <div class="clock-box">UTC: <span id="utc"></span></div>
             <div class="clock-box">ET: <span id="est"></span></div>
             <div class="clock-box">CT: <span id="cst"></span></div>
@@ -173,7 +174,8 @@
             <a href="http://www.espn.com">Sports</a>
             <a href="http://www.weather.com">Weather</a>
             <div class="dropdown">
-                <button class="dropbtn">Research Links
+                <button class="dropbtn">
+                    Research Links
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -183,7 +185,8 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">Social Media
+                <button class="dropbtn">
+                    Social Media
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -225,6 +228,10 @@
         // Update every second
         setInterval(updateClocks, 1000);
         updateClocks(); // Initial call
+    </script>
+    <script>
+        document.getElementById('today').textContent =
+            new Date().toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     </script>
 </body>
 </html>
